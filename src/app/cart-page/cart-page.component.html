@@ -1,0 +1,92 @@
+<div class="container">
+    <!-- <ul>
+        <li *ngFor="let cartItem of cart.items">
+            <div>
+                <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
+            </div>
+            <div>
+                <a routerLink="/food/{{cartItem.food.id}}">
+                    {{cartItem.food.name}}
+                </a>
+            </div>
+            <div>
+                <select #quantitySelect (change)="changeQuantity(cartItem, quantitySelect.value)">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div>
+                {{cartItem.price | currency}}
+            </div>
+            <div>
+                <button mat-raised-button color="warn" class="remove-button" (click)="removeFromCart(cartItem)">
+                    Remove
+                </button>
+            </div>
+        </li>
+    </ul> -->
+
+    <table class="table align-middle mb-0">
+        <thead class="">
+            <tr>
+                <th>Item</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cartItem of cart.items">
+                <td>
+                    <div class="d-flex align-items-center">
+                        <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name" />
+                    </div>
+                </td>
+                <td>
+                    <p class="fw-normal mb-1 name"><strong>{{cartItem.food.name}}</strong></p>
+                </td>
+                <td>
+                    <select #quantitySelect (change)="changeQuantity(cartItem, quantitySelect.value)">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>{{cartItem.price | currency}}</td>
+                <td>
+                    <button mat-button class="remove-button" (click)="removeFromCart(cartItem)">
+                        <strong>Remove</strong>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- <div class="checkout">
+        <div>
+            <div class="food-count">
+                {{cart.items.length}}
+            </div>
+            <div class="total-price">
+                {{cart.totalPrice | currency}}
+            </div>
+        </div>
+    </div> -->
+
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title class="len">{{cart.items.length}}</mat-card-title>
+            <mat-card-title class="price">{{cart.totalPrice | currency}}</mat-card-title>
+        </mat-card-header><br><br>
+
+        <!-- <a routerLink="/checkout">Proceed to Checkout</a> -->
+        <button mat-raised-button class="btn">Proceed to Checkout</button>
+    </mat-card>
+
+</div>

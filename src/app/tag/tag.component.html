@@ -1,0 +1,21 @@
+<div *ngIf="tags" [style.justifyContent]="justifyContent">
+    <mat-chip-listbox aria-label="Tag Selection">
+        <mat-chip-option color="accent" *ngFor="let t of tags" routerLink="/tag/{{t.name}}">
+            {{t.name}} ({{t.count}})
+        </mat-chip-option>
+    </mat-chip-listbox>
+</div>
+
+<div *ngIf="foodPageTags" [style.justifyContent]="justifyContent">
+    <mat-chip-listbox aria-label="Tag Selection">
+        <mat-chip color="accent" *ngFor="let tg of foodPageTags">
+            {{tg}}
+        </mat-chip>
+    </mat-chip-listbox>
+</div>
+<!-- <mat-chip-listbox aria-label="Fish selection">
+    <mat-chip-option>One fish</mat-chip-option>
+    <mat-chip-option color="primary">Two fish</mat-chip-option>
+    <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+    <mat-chip-option color="warn">Warn fish</mat-chip-option>
+  </mat-chip-listbox> -->

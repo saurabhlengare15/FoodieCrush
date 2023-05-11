@@ -1,0 +1,111 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3rem;
+}
+
+.container > *{
+    min-width: 25rem;
+    max-width: 40rem;
+}
+
+img{
+    border-radius: 2rem;
+    flex: 1 0;
+    object-fit: cover;
+    height: 25rem;
+    margin: 1rem;
+}
+
+.details{
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    /* flex: 1 1; */
+    /* border-radius: 3rem; */
+    padding: 2rem;
+    color: #000;
+    /* margin-left: 1rem; */
+    /* background-color: red; */
+}
+
+.details .header{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.details .name{
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.favourite{
+    color: #ff2a71;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -10px;
+    right: 0px;
+}
+
+mat-icon{
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+}
+
+.favourite.not{
+    color: #000;
+}
+
+.origins{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 0rem 1rem 0;
+}
+
+.origins > span{
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    margin: .5rem .5rem .5rem 0;
+    border-radius: 2rem;
+    background-color: #edc50044;
+    font-weight: 600;
+}
+
+app-tag{
+    float: left;
+    margin-bottom: 1rem;
+}
+
+.cook-time{
+    margin: 1rem;
+}
+
+.cook-time span{
+    padding: .6rem 2rem .6rem 0;
+    border-radius: 10rem;
+    font-size: 1.2rem;
+    font-weight: 550;
+    color: #edc500;
+}
+
+.price{
+    font-size: 1.8rem;
+    margin: 1rem 1rem 1rem 1rem;
+    font-weight: 700;
+    color: #038C25;
+}
+
+.price::before{
+    content: "Price: ";
+    font-size: 20px;
+}
+
+button{
+    padding: 1rem;
+    font-size: 1rem;
+}

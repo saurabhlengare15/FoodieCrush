@@ -1,0 +1,9 @@
+div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+mat-chip-option{
+    font-size: 14px;
+    font-weight: 500;
+}

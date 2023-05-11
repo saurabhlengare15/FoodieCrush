@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+input{
+    border-radius: 10rem 0 0 10rem;
+    border: none;
+    height: 3rem;
+    width: 22.5rem;
+    background-color: #F2F2F2;
+    padding: 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+}
+
+button{
+    background-color: #edc500;
+    height: 3rem;
+    width: 7rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 0 10rem 10rem 0rem;
+    outline: none;
+    border: none;
+    opacity: 0.8;
+}
+
+button:hover{
+    opacity: 1;
+    cursor: pointer;
+}

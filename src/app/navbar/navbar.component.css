@@ -1,0 +1,30 @@
+.mat-toolbar {
+    background-color: #06bd68;
+    color: white;
+    height: 9%;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+span a{
+    font-family: 'Bruno Ace SC', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    color: #fff;
+}
+
+.btn{
+    height: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 3px;
+}
+
+.btn:hover{
+    background-color: #00ba63;
+    /* background-color: #fff; */
+    /* color: #ff4081; */
+}
